@@ -92,13 +92,16 @@ console.log(CemberinAlani(15, pi));
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
-let ucetambolunenler,
-  enkucuk,
-  enbuyuk,
-  ucebolunenlerintoplami,
-  besyuzdenkucuksayilar,
-  siralisayilar,
-  tekraredensayilar;
+let ucetambolunenler = [];
+let tekraredensayilar = [];
+let besyuzdenkucuksayilar = [];
+let siralisayilar = [];
+
+let enkucuk = sayilar[0];
+let enbuyuk = sayilar[0];
+let ucebolunenlerintoplami = 0;
+
+
 
 // 3a çözümü
 for (let i = 0; i < sayilar.length; i++) {
@@ -112,10 +115,10 @@ for (let i = 0; i < sayilar.length; i++) {
 
 // 3b çözümü:
 sayilar.forEach((sayi) => {
-  if (sayi % 3 == 0) {
+  if (sayi % 3 === 0) {
     ucetambolunenler.push(sayi);
   }
-})
+});
 
 // 3c çözümü:
 ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0);
